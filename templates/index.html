@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mera App & Game Hub</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #121212; color: white; margin: 0; padding: 20px; text-align: center; }
+        h1 { color: #00d2ff; margin-bottom: 5px; }
+        p.subtitle { color: #aaa; margin-bottom: 30px; }
+        
+        /* Button ka Design */
+        .add-btn {
+            background-color: #28a745; 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none;
+            border-radius: 8px; 
+            font-weight: bold; 
+            font-size: 18px; 
+            display: inline-block;
+            margin-bottom: 40px;
+            transition: 0.3s;
+        }
+        .add-btn:hover { background-color: #218838; }
+
+        /* Cards ka Design */
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1200px; margin: 0 auto; }
+        .card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 25px; width: 300px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        h3 { margin: 0 0 10px 0; font-size: 22px; }
+        p.desc { font-size: 14px; color: #bbb; min-height: 45px; }
+        .info { font-size: 13px; color: #888; margin: 15px 0; padding-top: 15px; border-top: 1px solid #333; display: flex; justify-content: space-between; }
+        .btn { display: block; width: 100%; padding: 14px 0; background-color: #00d2ff; color: #000; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Hub</h1>
+    <p class="subtitle">Yahan se mere banaye hue saare Apps aur Games download karein.</p>
+
+    <!-- YEH RAHA WO BUTTON -->
+    <a href="/add" class="add-btn">+ Add New App / Game</a>
+
+    <div class="container">
+        {% for project in projects %}
+        <div class="card">
+            <h3>{{ project.name }}</h3>
+            <p class="desc">{{ project.description }}</p>
+            <div class="info">
+                <span>Size: {{ project.size }}</span>
+                <span>Version: {{ project.version }}</span>
+            </div>
+            <a href="{{ project.download_link }}" target="_blank" class="btn">? Download Now</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

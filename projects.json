@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Jarvis PC",
+        "type": "App",
+        "description": "this is a ai voice assistant",
+        "download_link": "https://www.mediafire.com/file/qz5h27y5g8sp17c/JarvisPC.exe/file",
+        "version": "1.0",
+        "size": "11.02"
+    },
+    {
+        "name": "Mp3 Player",
+        "type": "App",
+        "description": "this is a mp3 player for pc",
+        "download_link": "https://www.mediafire.com/file/zfgvuzky8yj5n70/MP3+Player.exe/file",
+        "version": "1.0",
+        "size": "17.04"
+    },
+    {
+        "name": "PomodoroTimer",
+        "type": "App",
+        "description": "this is a time saving app",
+        "download_link": "https://www.mediafire.com/file/8c8a6brbydf458v/PomodoroTimer.exe/file",
+        "version": "1.0",
+        "size": "10.97"
+    }
+]

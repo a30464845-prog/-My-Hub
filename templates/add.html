@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New App</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #121212; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .form-box { background-color: #1e1e1e; padding: 30px; border-radius: 12px; width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #333; }
+        h2 { color: #00d2ff; text-align: center; margin-top: 0; }
+        label { display: block; margin-top: 15px; font-size: 14px; color: #ccc; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #444; background-color: #2a2a2a; color: white; box-sizing: border-box; }
+        input:focus, select:focus, textarea:focus { border-color: #00d2ff; outline: none; }
+        button { width: 100%; padding: 12px; margin-top: 25px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #218838; }
+        .back-link { display: block; text-align: center; margin-top: 15px; color: #aaa; text-decoration: none; font-size: 14px; }
+        .back-link:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <h2>Add New App / Game</h2>
+        <form method="POST">
+            <label>App/Game ka Naam:</label>
+            <input type="text" name="name" required placeholder="e.g. Jarvis AI">
+
+            <label>Type (Qism):</label>
+            <select name="type">
+                <option value="App">App</option>
+                <option value="Game">Game</option>
+            </select>
+
+            <label>Description (Tafseel):</label>
+            <textarea name="description" rows="3" required placeholder="App kya karti hai..."></textarea>
+
+            <label>Download Link:</label>
+            <input type="url" name="download_link" required placeholder="https://drive.google.com/...">
+
+            <label>Version:</label>
+            <input type="text" name="version" required placeholder="e.g. v1.0">
+
+            <label>Size:</label>
+            <input type="text" name="size" required placeholder="e.g. 25 MB">
+
+            <button type="submit">Save App</button>
+        </form>
+        <a href="/" class="back-link">? Wapas Home Page Par Jao</a>
+    </div>
+
+</body>
+</html>
